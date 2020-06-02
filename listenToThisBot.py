@@ -136,6 +136,7 @@ def inform_post_on_reddit(post_ids, playlist_id, sleep_time):
     for i, id_num in enumerate(post_ids):
         print(f'Posting at-a-boys to Reddit... {i+1} of {len(post_ids)}')
         post_object = reddit.submission(id = id_num)
+        post_object.upvote()
         post_object.reply(message)
         if i < len(post_ids)-1:
             time.sleep(sleep_time)
