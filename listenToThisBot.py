@@ -130,8 +130,8 @@ def inform_post_on_reddit(post_ids, playlist_id, sleep_time):
     global reddit
     global spotify
     link = spotify.playlist(playlist_id)['external_urls']['spotify']
-    message = f'Thanks for posting great music! Beep. Boop! \n\r' + \
-                f'Upvoted and added to a weekly [playlist]({link}).'
+    message = f'Thanks for posting great music! Beep. Boop! Upvoted and added to a weekly [playlist]({link}).\n\r' + \
+                f'This bot parses through the top posts in this subreddit and posts them to a single spotify playlist. Please upvote if you like the way it works, and message me questions or bug reports.'
     print(f'Message -- {message}')
     for i, id_num in enumerate(post_ids):
         print(f'Posting at-a-boys to Reddit... {i+1} of {len(post_ids)}')
